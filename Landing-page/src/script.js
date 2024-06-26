@@ -1,36 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById('welcome-modal');
-    var closeButton = document.getElementsByClassName('close-button')[0];
-
-    // Проверяем, было ли уже показано модальное окно
-    if (!localStorage.getItem('welcomeModalShown')) {
-        modal.style.display = 'block';
-    }
-
-    closeButton.onclick = function() {
-        modal.style.display = 'none';
-        // Сохраняем в LocalStorage, что модальное окно было показано
-        localStorage.setItem('welcomeModalShown', 'true');
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-            localStorage.setItem('welcomeModalShown', 'true');
-        }
-    }
-});
-
 window.addEventListener('scroll', function() {
     var header = document.querySelector('header');
     var scrollToTop = document.querySelector('.scroll-to-top');
 
     if (window.pageYOffset > 100) {
-        header.style.backgroundColor = '#555';
-        header.style.opacity = '0.9';
+        header.style.opacity = '0.7';
         scrollToTop.classList.add('show');
     } else {
-        header.style.backgroundColor = '#333';
         header.style.opacity = '1';
         scrollToTop.classList.remove('show');
     }
@@ -42,6 +17,38 @@ document.querySelector('.scroll-to-top').addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+// Получаем все активные уровни
+const activeLevels = document.querySelectorAll('.skill-level .level.active');
+
+// Получаем ссылки на необходимые элементы
+const modalElement = document.getElementById('skillModal');
+const modalDescription = document.querySelector('.modal-skill-description');
+const modal = new bootstrap.Modal(modalElement);
+
+activeLevels.forEach((level) => {
+  level.addEventListener('click', () => {
+    const levelText = level.textContent;
+    modalDescription.textContent = levelText;
+    modal.show();
+  });
+});
+
+// Добавляем обработчик события "hidden.bs.modal" на модальное окно
+modalElement.addEventListener('hidden.bs.modal', () => {
+  modalDescription.textContent = '';
+});
+
+// Добавляем обработчик клика вне модального окна
+document.addEventListener('click', (event) => {
+  if (!modalElement.contains(event.target)) {
+    modal.hide();
+  }
+});
+
+
+
+
 
 document.querySelectorAll('.slider-button').forEach((button) => {
     button.addEventListener('click', (event) => {
@@ -61,4 +68,3 @@ document.querySelectorAll('.slider-button').forEach((button) => {
         modalInstance.show();
     });
 });
-
