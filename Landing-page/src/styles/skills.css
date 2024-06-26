@@ -1,0 +1,78 @@
+.skills {
+    padding: 30px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .skill-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .skill-level {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .skill-level .level {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .skill-level .level.active {
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skill-level .level.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s, height 0.4s, opacity 0.4s;
+  }
+  
+  .skill-level .level.active:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+  }
+  
+  .skill-level .level:not(:last-child) {
+    margin-right: 10px;
+  }
+  

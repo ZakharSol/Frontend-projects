@@ -11,238 +11,86 @@ body {
     padding: 0 20px;
 }
 
-/* Стили для header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.nav-menu {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li {
-    margin-left: 20px;
-}
-
-.nav-menu li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Стили для hero section */
-.hero {
-    background-image: url('https://via.placeholder.com/1920x1080');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #fff;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.hero-description {
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-.hero-button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-    background-color: #444;
-}
-
-/* Стили для слайдера */
-.slider-wrapper {
+section,
+.section {
+    color: var(--default-color);
+    background-color: var(--background-color);
     padding: 60px 0;
+    scroll-margin-top: 118px;
+    overflow: clip;
 }
 
-.slider-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+@media (max-width: 1199px) {
+
+    section,
+    .section {
+        scroll-margin-top: 100px;
+    }
 }
 
-.slider-info-item {
-    flex: 1;
-    text-align: center;
-}
-
-.slider-info-item h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.slider-button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-.slider-button:hover {
-    background-color: #444;
-}
-
-.slider-item {
-    text-align: center;
-}
-
-.slider-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.slider-item h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.slider-item p {
-    font-size: 16px;
-}
-
-/* Стили для преимуществ */
-.features {
-    background-color: #f8f8f8;
-    padding: 60px 0;
-}
-
-.feature-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.feature-item {
-    flex: 1;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.feature-icon {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.feature-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.feature-description {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Стили для контактной формы */
-.contact {
-    padding: 60px 0;
-}
-
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
 .section-title {
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title p {
+    color: var(--heading-color);
+    margin: 10px 0 0 0;
     font-size: 32px;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
+    font-family: var(--heading-font);
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+.section-title p .description-title {
+    color: var(--accent-color);
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
+.modal-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    height: 150px;
-}
-
-.form-button {
-    display: block;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 16px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .modal-skill.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-skill-content {
+    background-color: #fff;
+    padding: 40px;
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.form-button:hover {
-    background-color: #444;
-}
-
-/* Стили для footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    font-size: 14px;
-}
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    max-width: 600px;
+    position: relative;
+    animation: modalFadeIn 0.5s ease-out;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,32 @@
+.features {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.feature-icon {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #666;
+}
