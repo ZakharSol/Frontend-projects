@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,56 +9,243 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="stylesheet" href="styles/modal-main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/modal-slider.css">
+    <link rel="stylesheet" href="styles/technologies.css">
+    <link rel="stylesheet" href="styles/features.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/team.css">
+
 </head>
+
 <body>
+    <div class="modal-main" id="welcome-modal">
+        <div class="modal-main-content">
+            <span class="close-button-main"></span>
+            <h2>Welcome!</h2>
+            <p>This site is a personal example of implementing a landing page.</p>
+            <p>Developer: Zakhar Solovyov</p>
+            <p>Contacts:</p>
+            <ul>
+                <li>Email: zsolovey1337@gmail.com</li>
+                <li><a href="https://vk.com/0o_00">VKontakte</a></li>
+                <li><a href="https://github.com/ZakharSol">GitHub</a></li>
+                <li><a href="https://t.me/Solovey1325">Telegram</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div id="header"></div>
 
     <main>
         <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-bg-overlay"></div>
+                <div class="hero-bg-particles"></div>
+            </div>
             <div class="hero-content">
-                <h1 class="hero-title">Добро пожаловать на наш сайт</h1>
-                <p class="hero-description">Мы предлагаем лучшие решения для вашего бизнеса.</p>
-                <a href="#" class="hero-button">Узнать больше</a>
+                <div class="hero-text">
+                    <h1 class="hero-title">Welcome to Our Website</h1>
+                    <p class="hero-description">Discover the best solutions for your business needs.</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#" class="hero-button">Learn More</a>
+                </div>
             </div>
         </section>
 
-        <section class="slider-wrapper">
-            <div class="slider-info">
-                <div class="slider-info-item">
+        <script src="hero-anim.js"></script>
+
+        <section class="technologies">
+            <div class="tech-info">
+                <div class="tech-info-item">
                     <h2>Наши услуги</h2>
                     <p>Ознакомьтесь с нашим списком услуг.</p>
-                    <a href="#" class="slider-button">Подробнее</a>
+                    <a href="#" class="tech-button">Подробнее</a>
                 </div>
-                <div class="slider-info-item">
+                <div class="tech-info-item">
                     <h2>Что говорят наши клиенты</h2>
                     <p>Читайте отзывы о нашей работе.</p>
-                    <a href="#" class="slider-button">Посмотреть</a>
+                    <a href="#" class="tech-button">Посмотреть</a>
                 </div>
-                <div class="slider-info-item">
+                <div class="tech-info-item">
                     <h2>Подробнее о нас</h2>
                     <p>Узнайте больше о нашей компании.</p>
-                    <a href="#" class="slider-button">Узнать больше</a>
-                </div>
-            </div>
-            <div class="slider">
-                <div class="slider-item" data-image="https://via.placeholder.com/600x500" data-description="Наши услуги">
-                    <img src="https://via.placeholder.com/600x500" alt="Слайд 1">
-                    <h2>Наши услуги</h2>
-                    <p>Ознакомьтесь с нашим списком услуг.</p>
-                </div>
-                <div class="slider-item" data-image="https://via.placeholder.com/600x500" data-description="Что говорят наши клиенты">
-                    <img src="https://via.placeholder.com/600x500" alt="Слайд 2">
-                    <h2>Что говорят наши клиенты</h2>
-                    <p>Читайте отзывы о нашей работе.</p>
-                </div>
-                <div class="slider-item" data-image="https://via.placeholder.com/600x500" data-description="Подробнее о нас">
-                    <img src="https://via.placeholder.com/600x500" alt="Слайд 3">
-                    <h2>Подробнее о нас</h2>
-                    <p>Узнайте больше о нашей компании.</p>
+                    <a href="#" class="tech-button">Узнать больше</a>
                 </div>
             </div>
         </section>
+
+        <section class="skills">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <h3>HTML+CSS</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle active">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>JavaScript</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle active">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>C#</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle active">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>PHP</h3>
+                        <div class="skill-level">
+                            <div class="level junior active">Low</div>
+                            <div class="level middle">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>Python</h3>
+                        <div class="skill-level">
+                            <div class="level junior active">Low</div>
+                            <div class="level middle">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>Delphi</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle active">Medium</div>
+                            <div class="level senior">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>SQL</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle">Medium</div>
+                            <div class="level senior active">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>Git</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle">Medium</div>
+                            <div class="level senior active">High</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <h3>Docker</h3>
+                        <div class="skill-level">
+                            <div class="level junior">Low</div>
+                            <div class="level middle">Medium</div>
+                            <div class="level senior active">High</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="skillModalLabel">Skill Level</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-skill-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="slider-wrapper">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#slideModal"
+                        data-slide-index="0">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide-index="1">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide-index="2">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="slideModal" tabindex="-1" aria-labelledby="slideModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="slideModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <p id="slideModalDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <section class="features">
             <div class="container">
@@ -73,7 +261,7 @@
                         <div class="feature-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        
+
                         <h3 class="feature-title">Высокая эффективность</h3>
                         <p class="feature-description">Наши решения позволяют достичь максимальных результатов.</p>
                     </div>
@@ -88,33 +276,61 @@
             </div>
         </section>
 
+        <section id="team" class="team section">
+            <div class="container section-title" data-aos="fade-up">
+                <p>Author</p>
+            </div>
+            <div class="container team">
+                <div class="row gy-4">
+                    <div class="align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/developer.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Zakhar Solovyov</h4>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact">
             <div class="container">
-                <h2 class="section-title">Свяжитесь с нами</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Имя</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="form-button">Отправить</button>
-                </form>
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-button">Отправить</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <div id="footer"></div>
 
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
     <script src="modules/header-footer.js"></script>
 </body>
+
 </html>
