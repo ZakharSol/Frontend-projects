@@ -1,0 +1,53 @@
+.team {
+    --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+}
+
+.team .team-member {
+    box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.team .team-member .member-img {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 200px; 
+}
+
+.team .team-member .member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.team .team-member .member-info {
+    flex: 1;
+    background-color: var(--contrast-color);
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.team .team-member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.team .team-member .member-info span {    
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.team .team-member .member-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
