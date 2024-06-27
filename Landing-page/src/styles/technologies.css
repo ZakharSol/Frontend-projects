@@ -33,17 +33,39 @@
     margin-bottom: 20px;
 }
 
+
 .tech-button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
     text-decoration: none;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
     padding: 12px 24px;
     border-radius: 4px;
     font-size: 16px;
-    transition: background-color 0.3s;
+}
+
+.tech-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s, height 0.4s, opacity 0.4s;
 }
 
 .tech-button:hover {
-    background-color: #444;
+    color: #fff;
+}
+
+.tech-button:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
 }
