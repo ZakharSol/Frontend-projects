@@ -57,7 +57,7 @@
                     <p class="hero-description">Discover the best solutions for your business needs.</p>
                 </div>
                 <div class="hero-cta">
-                    <a href="#" class="hero-button">Learn More</a>
+                    <a href="#" class="hero-button">Load More</a>
                 </div>
             </div>
         </section>
@@ -81,19 +81,29 @@
                 </div>
             </div>
         </section>
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-        <section class="skills">
+        <section class="skills-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Skills</h2>
+              <div class="section-title">
+                <h2>My Skills</h2>
+              </div>
+              <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="soft-skills">Soft Skills</button>
+                <button class="tab-btn" data-tab="hard-skills">Hard Skills</button>
+              </div>
+              <div class="skills-content">
+                <div class="tab-content active" id="soft-skills">
+                  <div class="skills-container" id="soft-skills-container"></div>
                 </div>
-        
-                <div class="skills-container" id="skills-container">
-                    <!-- Здесь будут созданы динамические элементы -->
+                <div class="tab-content" id="hard-skills">
+                  <div class="skills-container" id="hard-skills-container"></div>
                 </div>
+              </div>
             </div>
-        </section>
-        
+          </section>
+
         <!-- Модальное окно -->
         <div class="modal-skill" id="skillModal">
             <div class="modal-skill-content">
@@ -111,26 +121,34 @@
         <section class="slider-wrapper">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 1" onclick="openModal(0)">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 1"
+                            onclick="openModal(0)">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 2" onclick="openModal(1)">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 2"
+                            onclick="openModal(1)">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 3" onclick="openModal(2)">
+                        <img src="https://via.placeholder.com/600x500" class="d-block w-100" alt="Slide 3"
+                            onclick="openModal(2)">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -150,80 +168,80 @@
             </div>
         </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            <section class="features">
-                <div class="container">
-                    <div class="feature-list">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <h3 class="feature-title">Быстрая работа</h3>
-                            <p class="feature-description">Выполняем все задачи в кратчайшие сроки.</p>
+        <section class="features">
+            <div class="container">
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
+                        <h3 class="feature-title">Быстрая работа</h3>
+                        <p class="feature-description">Выполняем все задачи в кратчайшие сроки.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
 
-                            <h3 class="feature-title">Высокая эффективность</h3>
-                            <p class="feature-description">Наши решения позволяют достичь максимальных результатов.</p>
+                        <h3 class="feature-title">Высокая эффективность</h3>
+                        <p class="feature-description">Наши решения позволяют достичь максимальных результатов.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-headset"></i>
+                        <h3 class="feature-title">Отличная поддержка</h3>
+                        <p class="feature-description">Мы всегда на связи и готовы помочь в любое время.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team section">
+            <div class="container section-title" data-aos="fade-up">
+                <p>Author</p>
+            </div>
+            <div class="container team">
+                <div class="row gy-4">
+                    <div class="align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/developer.jpg" class="img-fluid" alt="">
                             </div>
-                            <h3 class="feature-title">Отличная поддержка</h3>
-                            <p class="feature-description">Мы всегда на связи и готовы помочь в любое время.</p>
+                            <div class="member-info">
+                                <h4>Zakhar Solovyov</h4>
+                                <span>Software Engineer</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="team" class="team section">
-                <div class="container section-title" data-aos="fade-up">
-                    <p>Author</p>
-                </div>
-                <div class="container team">
-                    <div class="row gy-4">
-                        <div class="align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="team-member">
-                                <div class="member-img">
-                                    <img src="assets/img/developer.jpg" class="img-fluid" alt="">
-                                </div>
-                                <div class="member-info">
-                                    <h4>Zakhar Solovyov</h4>
-                                    <span>Software Engineer</span>
-                                </div>
-                            </div>
+        <section class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-button">Отправить</button>
+                    </form>
                 </div>
-            </section>
-
-            <section class="contact">
-                <div class="container">
-                    <div class="contact-wrapper">
-                        <h2 class="section-title">Свяжитесь с нами</h2>
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Имя</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Сообщение</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="form-button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
     </main>
 
     <div id="footer"></div>
