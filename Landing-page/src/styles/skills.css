@@ -1,5 +1,5 @@
 .skills {
-  padding: 30px 0;
+  padding: 15px 0;
   background-color: #f9f9f9;
 }
 
@@ -9,41 +9,9 @@
   gap: 30px;
 }
 
-.soft-skills-container,
-.hard-skills-container {
-  width: 100%;
-}
-
-.skills-tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.tab-button {
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.tab-button.active {
-  background-color: #444;
-  color: #fff;
-}
-
-.soft-skills-content,
-.hard-skills-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
 .skill-item {
   background-color: #fff;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -106,4 +74,63 @@
 
 .skill-level .level:not(:last-child) {
   margin-right: 10px;
+}
+
+.skills-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+  background-color: #444;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn:not(.active):hover {
+  background-color: #ccc;
+}
+
+.tab-btn.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 0.4s, height 0.4s, opacity 0.4s;
+}
+
+.tab-btn.active:hover::before {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }
