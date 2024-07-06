@@ -1,0 +1,146 @@
+.auth-container {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-form-logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.auth-form-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.auth-form-content {
+    width: 100%;
+}
+
+.google-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DB4437;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.google-login-btn:hover {
+    background-color: #C53929;
+}
+
+.google-login-btn i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.auth-form-separator {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.auth-form-separator span {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.auth-form-footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-form-agreement {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.auth-form-agreement a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-form-agreement a:hover {
+    text-decoration: underline;
+}
+
+.auth-form-login-link {
+    font-size: 0.9rem;
+}
+
+.auth-form-login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-form-login-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/animation.css">
+        <link rel="stylesheet" href="../styles/registration.css">
+    </head>
+    <body>
+        <div id="header"></div> 
+        
+        <main>
+            <section class="hero">
+                <div class="hero-bg">
+                    <div class="hero-bg-overlay"></div>
+                    <div class="hero-bg-particle"></div>
+                    <div class="auth-container">
+                        <div class="auth-form-container">
+                            <div class="auth-form-header">
+                                <div class="auth-form-logo">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <h2 class="auth-form-title">Присоединяйтесь, чтобы увидеть возможности!</h2>
+                            </div>
+                            <div class="auth-form-content">
+                                <button class="google-login-btn" id="googleSignInButton">
+                                    <i class="fab fa-google"></i>
+                                    Войти через Google
+                                </button>
+                                <div class="auth-form-separator">
+                                    <span></span>
+                                </div>
+                                <form class="auth-form registration-form">
+                                    <div class="form-group">
+                                        <label for="login">Логин</label>
+                                        <input type="text" id="login" name="login" required pattern="[a-zA-Z0-9_-]+" title="Логин может содержать только буквы, цифры, подчеркивания и тире">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" title="Пожалуйста, введите корректный email-адрес">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Пароль</label>
+                                        <input type="password" id="password" name="password" required pattern="[A-Za-z\d@$!%*?&]{8,}$" title="Пароль должен содержать не менее 8 символов">
+                                    </div>
+                                    <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                                </form>
+                                <div class="auth-form-footer">
+                                    <div class="auth-form-agreement">
+                                        Регистрируясь, вы соглашаетесь с
+                                        <a href="#">Условиями предоставления услуг</a>,
+                                        <a href="#">Политикой конфиденциальности</a>
+                                        и <a href="#">Политикой использования файлов cookie</a>.
+                                    </div>
+                                    <div class="auth-form-login-link">
+                                        Уже зарегистрированы? <a href="#">Войти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="../script.js"></script>
+        <script src="../modules/header-footer.js"></script>
+    </body>
+</html>
